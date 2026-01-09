@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <style>
-  /* ESTILOS PARA MOODLE */
+  /* ESTILOS VISUALES */
   .guide-container {
     background-color: #ffffff;
     border: 1px solid #e0e0e0;
@@ -34,7 +34,7 @@
     font-size: 1rem;
   }
 
-  /* BLOQUES DE CONTENIDO */
+  /* BLOQUES DE INFO */
   .info-block {
     margin-bottom: 30px;
     display: flex;
@@ -69,9 +69,9 @@
     font-size: 0.95rem;
   }
 
-  /* CAJAS DESTACADAS */
+  /* CAJAS DE AVISO */
   .tip-box {
-    background-color: #fff8e1; /* Amarillo suave */
+    background-color: #fff8e1;
     border-left: 4px solid #f1c40f;
     padding: 15px;
     border-radius: 4px;
@@ -81,7 +81,7 @@
   }
 
   .nav-box {
-    background-color: #e8f6f3; /* Verde suave */
+    background-color: #e8f6f3;
     border-left: 4px solid #1abc9c;
     padding: 15px;
     border-radius: 4px;
@@ -90,7 +90,7 @@
     margin-top: 10px;
   }
 
-  /* BOTÓN SIMULADO */
+  /* BOTÓN PEQUEÑO SIMULADO */
   .btn-sim {
     background: #eee;
     padding: 2px 6px;
@@ -100,14 +100,24 @@
     font-weight: bold;
     color: #333;
   }
-  
-  /* DESTACADO NOMBRE TUTORA */
-  .tutor-name {
-    color: #2980b9;
-    font-weight: 700;
-    background-color: #eaf2f8;
-    padding: 2px 5px;
-    border-radius: 4px;
+
+  /* BOTÓN DE CONTACTO PRINCIPAL */
+  .contact-button {
+    display: inline-block;
+    background-color: #2980b9;
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .contact-button:hover {
+    background-color: #1a5276;
+    text-decoration: none;
+    transform: translateY(-2px);
   }
 
 </style>
@@ -125,13 +135,13 @@
     <div class="icon-circle">🖥️</div>
     <div class="text-area">
       <h4>1. Maximiza tu espacio de visualización</h4>
-      <p>Este curso utiliza Libros Interactivos con tablas y ejercicios anchos. Para evitar tener que desplazar la pantalla horizontalmente, es vital <strong>ganar espacio</strong>:</p>
+      <p>Este curso utiliza Libros Interactivos anchos. Para verlo todo perfecto:</p>
       <ul>
-        <li><strong>Oculta el Menú Lateral del Curso:</strong> Haz clic en el botón <span class="btn-sim">X</span> o el icono <span class="btn-sim">☰</span> (arriba a la izquierda) para cerrar la barra lateral izquierda de Moodle.</li>
-        <li><strong>Oculta el Índice del Libro:</strong> Dentro de las actividades, si ves una columna a la izquierda con el índice de páginas, ciérrala usando el icono del menú interno.</li>
+        <li><strong>Oculta el Menú Lateral del Curso:</strong> Haz clic en el botón <span class="btn-sim">X</span> o <span class="btn-sim">☰</span> (arriba a la izquierda).</li>
+        <li><strong>Oculta el Índice del Libro:</strong> Dentro de los ejercicios, cierra la columna lateral de la izquierda usando su icono de menú.</li>
       </ul>
       <div class="tip-box">
-        <strong>💡 ¿Por qué es importante?</strong> Al tener la pantalla limpia, las tablas gramaticales y ejercicios se adaptarán mejor y no verás el contenido cortado.
+        <strong>💡 Importante:</strong> Así evitarás ver las tablas gramaticales cortadas.
       </div>
     </div>
   </div>
@@ -139,10 +149,9 @@
   <div class="info-block">
     <div class="icon-circle">🛠️</div>
     <div class="text-area">
-      <h4>2. Herramientas externas recomendadas</h4>
-      <p>Aunque el curso está explicado paso a paso, te recomendamos tener abierta <strong>en una pestaña aparte</strong> una herramienta de consulta:</p>
-      <p>✅ <strong>Recomendado:</strong> <a href="https://www.wordreference.com/" target="_blank">WordReference</a> o Cambridge Dictionary para buscar palabras sueltas.</p>
-      <p>❌ <strong>A evitar:</strong> No uses el "Traductor automático de Google" (botón derecho > Traducir al español) sobre la página del curso. Esto puede alterar el código de los ejercicios y marcarte respuestas correctas como erróneas.</p>
+      <h4>2. Herramientas externas</h4>
+      <p>✅ <strong>Recomendado:</strong> Ten abierto <a href="https://www.wordreference.com/" target="_blank">WordReference</a> en otra pestaña para dudas de vocabulario.</p>
+      <p>❌ <strong>A evitar:</strong> No uses el traductor automático del navegador sobre la página del curso, ya que puede romper los ejercicios interactivos.</p>
     </div>
   </div>
 
@@ -151,31 +160,27 @@
   <div class="info-block">
     <div class="icon-circle">🗺️</div>
     <div class="text-area">
-      <h4>3. ¿Cómo moverte por el curso?</h4>
-      <p>El contenido está organizado por <strong>Destrezas</strong> (Speaking, Listening, Grammar...) para que trabajes cada área a fondo.</p>
-      
+      <h4>3. Ruta recomendada</h4>
       <div class="nav-box">
-        <strong>🚀 Nuestra recomendación de ruta:</strong><br>
-        Aunque la navegación es libre y puedes saltar de una unidad a otra, el curso tiene una lógica progresiva. Te aconsejamos seguir el orden numérico: empieza por la <strong>Unidad 0</strong>, sigue con la <strong>Unidad 1</strong>, y así sucesivamente.
+        <strong>🚀 Orden sugerido:</strong><br>
+        Aunque la navegación es libre, te aconsejamos seguir el orden numérico: <strong>Unidad 0 → Unidad 1 → Unidad 2...</strong> para asentar bien las bases antes de avanzar.
       </div>
-      <p style="margin-top:10px;">Esto te asegurará construir una base sólida antes de pasar a conceptos más complejos.</p>
     </div>
   </div>
 
   <div class="info-block">
     <div class="icon-circle">💬</div>
     <div class="text-area">
-      <h4>4. ¿Tienes dudas o problemas técnicos?</h4>
-      <p>Si te encuentras con algún error en la plataforma o tienes una duda académica que no consigues resolver, estamos aquí para ayudarte.</p>
-      <p><strong>📩 Contacto Directo con tu Tutora:</strong></p>
-      <p>No te quedes con la duda. Utiliza la <strong>mensajería interna de la plataforma</strong>:</p>
-      <ol>
-        <li>Haz clic en el icono de "bocadillo" 💬 situado en la esquina superior derecha (junto a tu perfil).</li>
-        <li>En la barra de búsqueda que aparece, escribe el nombre de tu tutora: <span class="tutor-name">Andrea Segura</span>.</li>
-        <li>Cuando aparezca su perfil en la lista, <strong>haz clic sobre él</strong>.</li>
-        <li>Escribe tu duda en el chat y envíalo.</li>
-      </ol>
-      <p>Andrea te responderá lo antes posible para que puedas seguir avanzando.</p>
+      <h4>4. ¿Tienes dudas? Habla con tu tutora</h4>
+      <p>Si tienes cualquier problema técnico o duda con el inglés, <strong>Andrea Segura</strong> está aquí para ayudarte.</p>
+      
+      <a href="/message/index.php?id=47" target="_self" class="contact-button">
+        📩 Enviar mensaje directo a Andrea
+      </a>
+
+      <p style="font-size: 0.85em; color: #7f8c8d; margin-top: 10px;">
+        *Al hacer clic se abrirá el chat privado automáticamente.
+      </p>
     </div>
   </div>
 
