@@ -178,6 +178,10 @@
   </div>
 
 </div>
-
+<script>
+  window.addEventListener('message', function(e) {
+    document.querySelector('iframe').style.height = e.data + 'px';
+  });
+</script>
 </body>
 </html>
