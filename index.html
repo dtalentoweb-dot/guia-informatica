@@ -4,10 +4,17 @@
 <meta charset="UTF-8">
 <style>
   /* ESTILOS GENERALES */
-  body {
+  html, body {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     background-color: #f9f9f9;
+  }
+
+  body {
+    padding: 20px;
+    box-sizing: border-box;
   }
 
   .guide-container {
@@ -19,6 +26,7 @@
     margin: 0 auto;
     font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
     box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-sizing: border-box;
   }
 
   .guide-header {
@@ -60,13 +68,14 @@
 
   .contact-card {
     flex: 1;
-    min-width: 280px;
+    min-width: 200px;
     background-color: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
     padding: 20px;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
   }
   .contact-card:hover {
     transform: translateY(-3px);
@@ -179,5 +188,10 @@
 
 </div>
 
+<script>
+  window.addEventListener('message', function(e) {
+    document.querySelector('iframe').style.height = e.data + 'px';
+  });
+</script>
 </body>
 </html>
