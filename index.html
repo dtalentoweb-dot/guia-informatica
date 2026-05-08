@@ -10,11 +10,16 @@
     width: 100%;
     height: 100%;
     background-color: #f9f9f9;
+    /* PERMITIR SCROLL SI EL CONTENIDO SUPERA EL ALTO FIJO DE H5P */
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   body {
     padding: 20px;
     box-sizing: border-box;
+    /* Mejora el desplazamiento en dispositivos iOS */
+    -webkit-overflow-scrolling: touch;
   }
 
   .guide-container {
@@ -109,6 +114,15 @@
   }
   .btn-cau:hover { background-color: #2c3e50; }
 
+  /* --- AJUSTES RESPONSIVE PARA MÓVIL --- */
+  @media (max-width: 600px) {
+    body { padding: 10px; }
+    .guide-container { padding: 20px; }
+    .info-block { flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+    .contact-card { min-width: 100%; }
+    .guide-title { font-size: 1.3rem; }
+  }
+
 </style>
 </head>
 <body>
@@ -190,7 +204,11 @@
 
 <script>
   window.addEventListener('message', function(e) {
-    document.querySelector('iframe').style.height = e.data + 'px';
+    // Nota: El selector 'iframe' solo funcionará si este script está fuera del iframe
+    // pero lo mantenemos tal cual lo enviaste.
+    if(document.querySelector('iframe')) {
+        document.querySelector('iframe').style.height = e.data + 'px';
+    }
   });
 </script>
 </body>
